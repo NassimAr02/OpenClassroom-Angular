@@ -19,7 +19,7 @@ export class FaceSnapsService {
               new Date(),
               6,
               'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Three_Rock_Mountain_Southern_Tor.jpg/2880px-Three_Rock_Mountain_Southern_Tor.jpg'
-          ),
+          ).WithLocation('à la montagne'),
           new FaceSnap(
             'Un bon repas',
             'Mmmh que c\'est bon !',
@@ -30,4 +30,8 @@ export class FaceSnapsService {
           
         
       ];
+      getFaceSnaps(): FaceSnap[] {
+        return [...this.faceSnaps];
+      }
+      
 }
