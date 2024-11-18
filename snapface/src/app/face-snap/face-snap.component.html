@@ -3,8 +3,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<div class="face-snap-card" [ngClass]="{snapped: dejaCliquer}"><h2>{{ faceSnap.title }}</h2>
-    <p>Mis en ligne le {{ faceSnap.createdDate }}</p>
+<div class="face-snap-card" [ngClass]="{snapped: dejaCliquer}"><h2>{{ faceSnap.title | uppercase }}</h2>
+    <p>Mis en ligne le {{ faceSnap.createdDate | date: 'd MMMM YYYY,à HH:mm'}}</p>
     <p>{{ faceSnap.description }}</p>
     <p>
         <button (click)="onSnap()">{{ SnapText }}</button>
